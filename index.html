@@ -5,20 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5a844d17ab.js" crossorigin="anonymous"></script>
     <title>Responsive Design Webpage</title>
     <link rel="stylesheet" type="text/css" href="index.css" media="screen" />
 </head>
 
 <body>
-    <header>
+    <header class="grid">
         <img class="name" src="./img/logo.png">
-        <ul>
-            <li><a class="current">home</a></li>
-            <li><a href="#aboutUs">about us</a></li>
-            <li><a href="#contact">contact</a></li>
-        </ul>
+        <button aria-label="Open Navigation" class="open-nav">&#9776;</button>
+        <nav class="nav navigation-open">
+            <button aria-label="Close Navigation" class="close-nav">&times;</button>
+            <ul class="nav-list">
+                <li><a class="current">home</a></li>
+                <li><a href="#aboutUs">about us</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
+    <main class="main grid">
         <h2 class="main-line">The only marketing agency on a mission from God,fully dedicated to increase your web
             traffic.</h2>
         <p class="second-line">We’re two brothers from Chicago that are trying to pay back our debt. We can help you
@@ -26,7 +31,7 @@
             contentmarketing and whatever else.</p>
         <button class="btn">contat us</button>
     </main>
-    <container class="info">
+    <container class="info grid">
         <div class="info-box">
             <h2 class="info-box-h2">About Us</h2>
             <p>We grew up in downtown Chicago, and we used to play in a band. Jake loves fried chicken, and Elwood loves
@@ -43,14 +48,22 @@
                 Bluesmobile the following day to discuss the deal.</p>
         </div>
     </container>
-    <footer>
-        <img src="./img/logo.png">
-        <p>Two brothers from Chicago that are just trying to pay back their debt by helping others with their SEO, SEM,
-            and Content Marketing needs.</p>
-        <p class="samll">© Jake&Elwood 2019</p>
+    <footer class="footer grid">
+        <div class="footer-main">
+            <img src="./img/logo.png">
+            <p>Two brothers from Chicago that are just trying to pay back their debt by helping others with their SEO,
+                SEM,
+                and Content Marketing needs.</p>
+            <p class="samll">© Jake&Elwood 2019</p>
+        </div>
+        <ul class="logos">
+            <li><i class="fa-brands fa-twitter"></i></li>
+            <li><i class="fa-brands fa-instagram"></i></li>
+            <li><i class="fa-brands fa-facebook"></i></li>
+        </ul>
     </footer>
 
-
+    <script src="index.js"></script>
 </body>
 
 </html>
