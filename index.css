@@ -33,6 +33,7 @@ header{
     left: 100%;
     width: 100%;
     transform: translateZ(0);
+    transition: transform 250ms;
 }
 
 .navigation-open{
@@ -47,7 +48,7 @@ header{
     background-color: black;
     margin: 0;
     padding: 1rem;
-    height: 100vh;
+    height: 100%;
     align-items: center;
     justify-content: space-around;
 }
@@ -71,9 +72,7 @@ header{
     border: none;
     cursor: pointer;
     width: 100px;
-    position: absolute;
-    right: 0;
-    top: .2em;
+    margin-left: auto;
 }
 
 li{
@@ -95,7 +94,8 @@ a{
     padding-bottom: 3px;
 }
 
-main{
+
+.main{
     display: grid;
     grid-template-columns: minmax(1em, 1fr) minmax(0px, 500px) minmax(1em, 1fr);
     background-image: url(./img/hero-bg.jpg);
@@ -104,11 +104,11 @@ main{
     padding: 4em 0;
 }
 
-main > *{
+.main > *{
     grid-column: 2 / -2;
 }
 
-main h2{
+.main h2{
     font-size: 1.5rem;
     line-height: 1.4;
     margin-bottom: 0;
@@ -172,12 +172,13 @@ footer ul li i{
 }
 
 @media (min-width: 600px){
-    main{
+    .main{
         grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(180px, 320px)) minmax(1em, 1fr);
         padding: 4em 0;
+        padding: 8em 0 7em;
     }
 
-    main > *{
+    .main > *{
         grid-column: 2 / span 2;
     }
 
@@ -205,5 +206,76 @@ footer ul li i{
         text-align: left;
     }
 
+    .open-nav,
+    .close-nav{
+        display: none;
+    }
+
+    .nav{
+        position: inherit;
+    }
+    .nav-list{
+        flex-direction: row;
+        justify-content: flex-start;
+
+    }
+
+    li{
+        font-size: 1.2rem;
+    }
+
+}
+
+.main-secundary{
+    display: grid;
+    grid-template-columns: minmax(1em, 1fr) minmax(0px, 500px) minmax(1em, 1fr);
+    grid-column-gap: 2em;
+}
+
+.grid > *{
+    grid-column: 2 / -2;
+}
+
+.page-title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.subtitle {
+    margin: .5em 0 3em;
+    font-size: 1.125rem;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+.section-title {
+    font-size: 1.125rem;
+    color: #000;
+    margin-top: 1.25em;
+}
+
+.section-title:first-child {
+    margin-top: 0;
+}
+
+.main-image {
+    margin-bottom: 1.5em;
+}
+
+@media (min-width: 600px) {
+    .main-secundary{
+        grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(130px, 320px)) minmax(1em, 1fr);
+    }
+    .main-image {
+        grid-column: 2;
+    }
+    
+    .main-text {
+        grid-column: 3 / span 2;
+    }
 }
 
