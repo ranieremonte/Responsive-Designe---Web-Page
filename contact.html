@@ -17,37 +17,36 @@
         <nav class="nav">
             <button aria-label="Close Navigation" class="close-nav">&times;</button>
             <ul class="nav-list">
-                <li><a class="current">home</a></li>
+                <li><a href="index.html">home</a></li>
                 <li><a href="about.html">about us</a></li>
-                <li><a href="contact.html">contact</a></li>
+                <li><a class="current">contact</a></li>
             </ul>
         </nav>
     </header>
-    <main class="main">
-        <h2 class="main-line">The only marketing agency on a mission from God,fully dedicated to increase your web
-            traffic.</h2>
-        <p class="second-line">We’re two brothers from Chicago that are trying to pay back our debt. We can help you
-            with SEO, SEM
-            contentmarketing and whatever else.</p>
-        <button class="btn">contat us</button>
+    <main class="main-secundary grid">
+        <h1 class="page-title">Contact</h1>
+        <p class="subtitle">Let us know how we can help you need and we’ll drive over to your place in our Bluesmobile
+            the following day to discuss the deal.</p>
+
+        <img class="main-image" src="./img/contact.jpg" alt="a bunch of mailboxes">
+        <div class="secondary-text">
+            <h2 class="section-title">Getting in touch with us</h2>
+            <p>You can either use the form or send us an email. I'll get back in touch with you as soon as possible!</p>
+        </div>
+
+        <div class="main-text">
+            <form class="contact-form" action="#" method="post">
+                <label for="fname">First Name</label>
+                <input id="fname" type="text">
+                <label for="lname">Last Name</label>
+                <input id="lname" type="text">
+                <label for="message">Message</label>
+                <textarea id="message"></textarea>
+                <button class="btn btn-primary">send</button>
+            </form>
+        </div>
     </main>
-    <container class="info">
-        <div class="info-box">
-            <h2 class="info-box-h2">About Us</h2>
-            <p>We grew up in downtown Chicago, and we used to play in a band. Jake loves fried chicken, and Elwood loves
-                dry white toast.</p>
-        </div>
-        <div class="info-box">
-            <h2 class="info-box-h2">Our skills</h2>
-            <p>Elwood is an expert in SEO, SEM, and driving from the police. Jake is our social media specialist, and he
-                has an amazing voice.</p>
-        </div>
-        <div class="info-box">
-            <h2 class="info-box-h2">Get in touch</h2>
-            <p>Send us an email with some info about what help you need and we’ll drive over to your place in our
-                Bluesmobile the following day to discuss the deal.</p>
-        </div>
-    </container>
+    </main>
     <footer class="footer">
         <div class="footer-main">
             <img src="./img/logo.png">
